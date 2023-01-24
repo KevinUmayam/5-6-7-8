@@ -17,16 +17,18 @@
 }
 
 .navBar {
-  width: 100%;
   margin: 0%;
   background: var(--black);
   padding: 0.3em 0em 0.3em 0em;
-  box-shadow: 0px 5px 5px red;
-  justify-content: flex-end;
-  display: flex;
-  align-items: center;
+  position: absolute;
+  right: 0;
 }
 
+.row {
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+}
 #logo {
   margin-left: 1em;
 }
@@ -36,13 +38,16 @@
   align-items: center;
   font-size: 1.3em;
   background-color: #000000;
+  width: 100%;
+  box-shadow:  0 0 5px 5px red
+
 }
 
 .logoText {
   color: var(--white);
   margin-left: 0.5em;
 }
-a {
+.navL {
   color: #e1efe6;
   text-transform: uppercase;
   text-decoration: none;
@@ -64,7 +69,7 @@ a:after {
   transition: 0.5s ease-out;
 }
 
-a:hover::after {
+.navL:hover::after {
   left: 0;
   width: 100%;
 }
@@ -102,7 +107,7 @@ a:hover::after {
   font-size: 1.5em;
 }
 
-[data-backgroundL="backgroundL"] {
+.backgroundL {
   background-image: url("https://studioaccessballroom.com/wp-content/uploads/2019/08/46513257_577258236077850_153409437174857728_o-Copy.jpg");
   background-repeat: no-repeat;
   width: 100%;
@@ -117,12 +122,14 @@ a:hover::after {
 
 #gridLogin {
   display: block;
+  align-items: center;
   margin-top: 2.5em;
   background-color: var(--Tblack);
   padding: 1em;
   margin-left: 30%;
   margin-right: 30%;
   border-radius: 20px;
+  min-width: 300px;
   /* display: grid;
  grid-template-columns: 2fr 1fr 2fr;
  align-items: flex-start; */
@@ -149,8 +156,12 @@ a:hover::after {
 
 .loginBtn {
   margin-top: 1em;
-  font-size: 22px;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.2em;
   text-align: center;
+  color: #fa0000;
+  background-color: black;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 5%;
@@ -160,26 +171,55 @@ a:hover::after {
   border-width: 3px;
 }
 .signupBtn {
-  font-size: 1.3em;
-  margin-top: 0.5em;
-  margin-left: 1.3em;
+   margin-top: 1em;
+  font-size: 22px;
+  text-align: center;
+  color: #fa0000;
+  background-color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 15px;
+  border-color: var(--red);
+  border-width: 3px;
 }
 /*==================================================
  login Contents CSS
  ==================================================*/
-
+.red {
+  color: #fa0000;
+  text-decoration: none;
+}
+a {
+   text-decoration: none;
+}
+#signUp:hover {
+  text-decoration: none;
+}
+.rowB {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 /*==================================================
  signup Contents CSS
  ==================================================*/
-[data-backgroundS="backgroundS"] {
-  background-image: url("https://images.pexels.com/photos/8281156/pexels-photo-8281156.jpeg");
-  background-repeat: no-repeat;
+.backgroundS {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/52d1eb65e4b0178cd181929b/1576792601584-CF9I4QPJVFC1D2XP7CZL/Ballroom+dancers.jpg?format=1000w");
+ background-repeat: no-repeat;
   width: 100%;
-  height: 90.1%;
+  height: 100%;
   background-size: cover;
-  position: absolute;
+  /* position: absolute; */
   background-attachment: fixed;
 }
+ /* background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  position: absolute;
+  background-attachment: fixed; */
 .containerS {
   display: flex;
   align-items: center;
@@ -189,11 +229,43 @@ a:hover::after {
 }
 .wrapperForm {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   flex-direction: column;
-  margin-left: 5em;
-  margin-bottom: 20vh;
+  /* position: absolute; */
+  /* top: 50;
+  left: 400; */
+  margin-top: 2em;
+  color: var(--white);
+}
+@media only screen and (max-width: 480px) {
+  #phoneScreens {
+    background-color: #000000;
+  }
+ .backgroundL {
+  background-image: url("https://studioaccessballroom.com/wp-content/uploads/2019/08/46513257_577258236077850_153409437174857728_o-Copy.jpg");
+  background-repeat: no-repeat;
+  /* width: 100%; */
+  /* height: 50%; */
+  background-size: cover;
+  position: absolute;
+  /* background-attachment: fixed; */
+    background-position: -220px 0px;
+}
+#gridLogin {
+  display: block;
+  margin-top: 2.5em;
+  background-color: var(--Tblack);
+  padding: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
+  /* display: grid;
+ grid-template-columns: 2fr 1fr 2fr;
+ align-items: flex-start; */
+}
+
+
 }
 .containerSG {
   display: flex;
@@ -203,48 +275,85 @@ a:hover::after {
   background: transparent;
   outline: 0;
   border-width: 0 0 2px;
-  border-color: var(--black);
+  border-color: var(--white);
   padding: 0.5em;
-  margin-left: 0.5em;
   font-size: 1.5em;
+  color: var(--white);
 }
 
 .sText {
   margin-left: 2em;
   font-size: 1.7em;
+   color: var(--white);
 }
 
 .sTextM {
   margin-left: 3.5em;
   font-size: 1.7em;
+  color: var(--white);
 }
 
-.sBtn {
-  font-size: 2em;
-  margin-top: 0.5em;
-  margin-left: 1.3em;
-  background: var(--black);
 
-  background: transparent;
-  border: none;
-}
-
-.sBtn {
-  box-shadow: inset 0 0 0 0 var(--red);
-  color: var(--black);
-  margin: 0 -0.25rem;
-  padding: 0 0.25rem;
-  border-radius: 10px;
-  transition: color 0.3s ease-in-out, 0.3s ease-in-out;
-}
 .sBtn:hover {
-  box-shadow: inset 150px 0 0 0 var(--red);
-  color: var(--black);
-  border-radius: 10px;
+  box-shadow: inset 180px 0 0 0 var(--red);
+  color: var(--white);
+  /* border-radius: 10px; */
 }
 /*==================================================
  signup Contents CSS
  ==================================================*/
+ .signup-form-container {
+  display: flex;
+  justify-content: center;
+  background-color: #000000d0;
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .signup-form-container {
+    width: 90%;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  color: white;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(199, 33, 33);
+  border-radius: 15px;
+  background-color: #f1f1f1;
+}
+
+.sbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  color: rgb(199, 33, 33);
+  border: 2px solid rgb(199, 33, 33);
+  border-radius: 5px;
+  font-size: 1em;
+  width: 50%;
+  margin: 0 auto;
+}
 
 /*==================================================
  homepage Contents CSS
@@ -435,11 +544,7 @@ li {
 
 /* iphone 12 pro size */
 @media screen and (max-width: 390px) {
-  .navBar {
-    flex-direction: column;
-    flex-direction: column;
-    height: 100%;
-  }
+
   .navText {
     display: flex;
   }
@@ -453,11 +558,9 @@ li {
   }
   .login-form {
     display: flex;
-    margin-top: 2.5em;
     background-color: var(--Tblack);
-    padding: 1em;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: -5%; */
+    /* margin-right: 10%; */
     border-radius: 20px;
     background-color: var(--gray);
   }
@@ -470,23 +573,9 @@ li {
     border-color: var(--red);
     border-width: 1px;
   }
-  #gridLogin {
-    display: block;
-    margin-top: 2.5em;
-    background-color: var(--Tblack);
-    padding: 1em;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 20px;
-    background-color: var(--gray);
-    /* when using these, mobile pushes them to left beyond the edge */
-    /* display: grid;
- grid-template-columns: 2fr 1fr 2fr;
- align-items: center; */
-  }
   .inputL {
     /* font-size: 10px; */
-    width: 20px;
+ 
     text-align: center;
     padding: px;
     outline: none;
@@ -494,4 +583,93 @@ li {
     border-color: var(--red);
     border-width: 3px;
   }
+  #gridLogin {
+  display: block;
+  margin-top: 2.5em;
+  background-color: var(--Tblack);
+  padding: 1em;
+  margin-left: 10px;
+  margin-right: 15px;
+  border-radius: 20px;
+  /* display: grid;
+ grid-template-columns: 2fr 1fr 2fr;
+ align-items: flex-start; */
 }
+}
+
+/* hamburger menu */
+@media screen and (max-width: 725px) {
+.navLinks {
+  display: none;
+}
+}
+
+.hamburger {
+  position:relative;
+  display:block;
+  width:35px;
+  cursor:pointer;
+  appearance:none;
+  background:none;
+  outline:none;
+  border:none
+}
+
+.hamburger .bar,.hamburger:after,.hamburger:before {
+  content:'';
+  border-radius: 3px;
+  display:block;
+  width:100%;
+  height:5px;
+  background-color:#FFF;
+  margin:6px 0px;
+  transition:0.4s;
+  transition:0.4s
+}
+
+  .hamburger.is-active:before { 
+    transform:rotate(-45deg) translate(-8px, 6px);
+    /* transform:rotate(-45deg) translate(-8px, 6px) */
+  }
+
+  .hamburger.is-active:after {
+    transform:rotate(45deg) translate(-9px, -8px);
+    /* transform:rotate(45deg) translate(-9px, -8px) */
+  }
+  .hamburger.is-active .bar{
+      opacity:0
+    }
+
+.mobile-nav {
+    position:fixed;
+    top:0;
+    left:100%;
+    width:100%;
+    min-height:100vh;
+    display:block;
+    z-index:98;
+    background-color:#12002F;
+    padding-top:120px;
+    transition:0.4s;
+    transition:0.4s
+}
+.mobile-nav.is-active {
+  left:0
+}
+
+.mobile-nav a {
+      display:block;
+      width:100%;
+      max-width:200px;
+      margin:0 auto 16px;
+      text-align:center;
+      padding:12px 16px;
+      background-color:#1f103F;
+      color:#FFF;
+      text-decoration:none
+    }
+.mobile-nav a:hover {
+      background-color:#24104f 
+    }
+    
+ @media (min-width: 768px){.mobile-nav{display:none}.hamburger{display:none}}

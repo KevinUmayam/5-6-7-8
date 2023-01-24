@@ -1,6 +1,6 @@
-<div data-backgroundS="backgroundS" class="containerSG">
+<body class="backgroundS" class="containerSG">
 
-  <form class="form signup-form wrapperForm">
+  {{!-- <form class="form signup-form wrapperForm ">
 
     <div class="form-group containerS">
       <label class="sText" for="name-signup">Username:</label>
@@ -22,12 +22,31 @@
       <button
         class="sBtn"
         id="register"
-        class="btn btn-primary"
         type="submit"
       >Signup</button>
     </div>
 
+  </form> --}}
+ <div class="signup-form-container">
+  <form>
+    <div class="form-group">
+      <label for="name-signup" class="form-label" >Username:</label>
+      <input type="text" id="name-signup" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="email-signup" class="form-label">Email:</label>
+      <input type="email" id="email-signup" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="password-signup" class="form-label">Password:</label>
+      <input type="password" id="password-signup" class="form-control">
+    </div>
+    <button  
+        id="register"
+        type="submit" 
+        class="sbtn btn-primary">Sign Up</button>
   </form>
-
 </div>
+
+</body>
 <script src="./js/sign-up.js"></script>

@@ -1,25 +1,31 @@
 {{! took this login form from class }}
 
-<body class="col-md-6" data-backgroundL="backgroundL">
+<body class="col-md-6 backgroundL" id="phoneScreens">
   {{! <h2>Login</h2> }}
-  <div id="gridLogin">
-    <div></div>
+  <div id="gridLogin" class="">
 
-    <form class="form login-form" data-formCard="card">
+    <form class="login-form" data-formCard="card">
 
       <label data-loginTE="stylingE" for="email-login">Email</label>
       <input class="form-input inputL" type="text" id="email-login" />
 
       <label data-loginT="styling" for="password-login">Password</label>
       <input class="form-input inputL" type="password" id="password-login" />
-
+<div class="rowB">
       <div class="form-group">
         <button class="btn btn-primary loginBtn" type="submit">login</button>
       </div>
-      <div>
-        <a class="btn btn-primary signup-form signupBtn" href="/sign-up">Sign
-          Up!</a>
+
+        <div class="form-group">
+        <button class="btn btn-primary loginBtn" type="submit"><a class="red" id="signUp" href="/sign-up">Sign
+          Up!</a></button>
       </div>
+      </div>
+      {{!-- <button class="form-group">
+        
+        <a class="btn btn-primary loginBtn" href="/sign-up">Sign
+          Up!</a>
+      </button> --}}
     </form>
   </div>
 </body>

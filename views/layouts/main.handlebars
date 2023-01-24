@@ -21,35 +21,36 @@
   </head>
 
   <body>
-    {{! css animation }}
-
-    {{! css animation }}
-    <header class="container">
-      <container>
+    <header>
         <div class="logoDiv">
-          <img id="logo" src="/images/5678.jpeg" alt="5-6-7-8-logo" />
           <h1 class="logoText">5-6-7-8</h1>
-        </div>
-        <div>
           <nav class="navBar navBar-i12">
         {{#if logged_in}}
           <div class="navText navText-i12">
-            <container>
-              <a href="/dashboard" id="dashboard" class="p-4">dashboard</a>
-              <a href="/" id="homepage">homepage</a>
-              <a class="no-button" id="logout">logout</a>
+            <container class="navLinks">
+              <a href="/dashboard" id="dashboard" class="p-4 navL">dashboard</a>
+              <a class="navL" href="/" id="homepage">homepage</a>
+              <a class="navL" id="logout">logout</a>
+              
             </container>
-            
+            <button class="hamburger is-active">
+              <div class="bar"></div>
+            </button>
           </div>
-      </container>
           <script src="/js/logout.js"></script>
         {{else}}
-          <a href="/login">login</a>
+          <a class="navL" href="/login">login</a>
         {{/if}}
       </nav>
         </div>
     </header>
+    <nav class="mobile-nav is-active">
+      <a href="/dashboard" id="dashboard" class="p-4 navL">dashboard</a>
+      <a class="navL" href="/" id="homepage">homepage</a>
+      <a class="navL" id="logout">logout</a>
+    </nav>
     {{{body}}}
+    <script src="../../utils/menu.js"></script>
   </body>
 
 </html>
