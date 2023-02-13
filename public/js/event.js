@@ -34,3 +34,4 @@ document
 document.querySelectorAll(".delete-post").forEach((button) => {
   button.addEventListener("click", deleteEvent);
 });
+

@@ -401,15 +401,16 @@ li {
 }
 
 .post-content {
-  background: #f1f2f2d0;
+  background: #f1f2f2;
   border-radius: 4px;
   width: 50%;
-  border: 1px solid #f1f2f2d0;
-  margin-bottom: 20px;
+  border: 1px solid #f1f2f2;
   overflow: hidden;
   position: relative;
   margin: auto;
   margin-bottom: 1em;
+  margin-top: 1em;
+  opacity: .93;
 }
 .titleName {
   display: flex;
@@ -481,6 +482,7 @@ li {
   background-image: url("https://static.wixstatic.com/media/a6e26dd0f09a46f1b238e704d8c4e455.jpg/v1/fill/w_1024,h_1024,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a6e26dd0f09a46f1b238e704d8c4e455.jpg");
   background-repeat: no-repeat;
   width: 100%;
+  /* height: 100%; */
   background-size: cover;
   position: absolute;
   background-attachment: fixed;
@@ -601,24 +603,43 @@ li {
 }
 
 .post-content {
-    background: #f1f2f2d0;
+    background: #f1f2f2;
     border-radius: 4px;
     width: 85%;
-    border: 1px solid #f1f2f2d0;
-    margin-bottom: 20px;
+    border: 1px solid #f1f2f2;
+    /* margin-bottom: 20px; */
     overflow: hidden;
     position: relative;
     margin: auto;
     margin-bottom: 1em;
+    margin-top: 1em;
+     opacity: .93;
 }
+
 .postText {
     font-size: 2em;
     margin-left: 0em;
     color: #000000;
 }
+
+}
+
+@media screen and (max-width: 1295px) {
+  .center {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* margin: 0% auto; */
+}
+.inputDec {
+    border: 3px solid #555;
+    padding: 5px;
+    margin: .3em auto ;
+}
 }
 /* hamburger menu */
 @media screen and (max-width: 725px) {
+
 .navLinks {
   display: none;
 }

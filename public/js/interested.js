@@ -1,4 +1,5 @@
 const interested = async (event) => {
+  event.preventDefault();
   const button = event.target;
   const response = await fetch(
     `/api/posts/${button.dataset.postId}/interested`,
