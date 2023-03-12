@@ -44,11 +44,15 @@
       </nav>
         </div>
     </header>
+     {{#if logged_in}}
     <nav class="mobile-nav ">
       <a href="/dashboard" id="dashboard" class="p-4 navL">dashboard</a>
       <a class="navL" href="/" id="homepage">homepage</a>
       <a class="navL" id="logout">logout</a>
     </nav>
+     {{else}}
+          <a class="navL" href="/login">login</a>
+        {{/if}}
     {{{body}}}
     
   </body>
